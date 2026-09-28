@@ -27,7 +27,7 @@ const meta = { title: 'Components/Theme Preview', component: ThemePreview, tags:
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Playground: Story = {
-  name: '모드 전환',
+  name: '프리뷰',
   play: async ({ canvasElement, globals }) => {
     const dark = globals.theme === 'dark';
     const canvas = within(canvasElement);
