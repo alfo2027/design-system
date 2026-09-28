@@ -10,7 +10,7 @@ import './ThemePreview.css';
 function ThemePreview() {
   const [saved, setSaved] = useState(false);
   return <section className="theme-preview">
-    <header><p className="theme-preview__eyebrow">LIVE COMPONENTS / COLOR MODES</p><h1>라이트·다크, 직접 확인하기</h1><p>‘모드 전환’ 스토리에서는 상단 Light / Dark 메뉴를 사용할 수 있습니다. 버튼과 입력창을 직접 조작해 보세요.</p></header>
+    <header><p className="theme-preview__eyebrow">LIVE COMPONENTS / COLOR MODES</p><h1>라이트·다크, 직접 확인하기</h1><p>상단 Light / Dark 메뉴로 테마를 바꾸고 직접 조작해 보세요. 테마를 바꾼 뒤 Interactions의 Rerun을 누르면 해당 테마로 동작을 검사합니다.</p></header>
     <div className="theme-preview__card">
       <h2>프로필 설정</h2>
       <TextField label="이메일" type="email" defaultValue="hello@example.com" hint="알림을 받을 이메일 주소입니다." />
@@ -26,22 +26,20 @@ function ThemePreview() {
 const meta = { title: 'Components/Theme Preview', component: ThemePreview, tags: ['!autodocs'], parameters: { controls: { disable: true } } } satisfies Meta<typeof ThemePreview>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const Light: Story = { globals: { theme: 'light' } };
-export const Dark: Story = { globals: { theme: 'dark' } };
-export const Playground: Story = { name: '모드 전환' };
-export const DarkInteraction: Story = {
-  name: '다크 모드 동작 검사', globals: { theme: 'dark' },
-  play: async ({ canvasElement }) => {
+export const Playground: Story = {
+  name: '모드 전환',
+  play: async ({ canvasElement, globals }) => {
+    const dark = globals.theme === 'dark';
     const canvas = within(canvasElement);
     const input = canvas.getByRole('textbox', { name: '이메일' });
     await userEvent.clear(input);
-    await userEvent.type(input, 'dark@example.com');
-    await expect(input).toHaveValue('dark@example.com');
+    await userEvent.type(input, 'hello@example.com');
+    await expect(input).toHaveValue('hello@example.com');
     await userEvent.click(canvas.getByRole('button', { name: '저장하기' }));
     await expect(canvas.getByRole('status')).toHaveTextContent('저장했습니다.');
     await expect(canvas.getByRole('button', { name: '비활성' })).toBeDisabled();
-    await expect(canvas.getByRole('button', { name: '저장하기' })).toHaveStyle({ color: 'rgb(23, 37, 84)' });
-    await expect(input).toHaveStyle({ backgroundColor: 'rgb(23, 23, 23)' });
+    await expect(canvas.getByRole('button', { name: '저장하기' })).toHaveStyle({ color: dark ? 'rgb(23, 37, 84)' : 'rgb(255, 255, 255)' });
+    await expect(input).toHaveStyle({ backgroundColor: dark ? 'rgb(23, 23, 23)' : 'rgb(255, 255, 255)' });
     await userEvent.click(canvas.getByRole('button', { name: '초기화' }));
     await expect(canvas.getByRole('status')).toHaveTextContent('변경사항을 저장할 수 있습니다.');
   },
