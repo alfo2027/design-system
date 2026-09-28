@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Badge } from './Badge';
+const meta = { title: 'Components/Badge', component: Badge, args: { tone: 'primary', children: '진행 중' }, argTypes: { tone: { control: 'inline-radio', options: ['primary', 'success', 'warning', 'danger'] } } } satisfies Meta<typeof Badge>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export const Primary: Story = {};
+export const Success: Story = { args: { tone: 'success', children: '완료' } };
+export const Warning: Story = { args: { tone: 'warning', children: '확인 필요' } };
+export const Danger: Story = { args: { tone: 'danger', children: '오류' } };
+export const AllTones: Story = { render: () => <div className="story-row"><Badge>진행 중</Badge><Badge tone="success">완료</Badge><Badge tone="warning">확인 필요</Badge><Badge tone="danger">오류</Badge></div> };
