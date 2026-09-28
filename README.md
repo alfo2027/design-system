@@ -65,3 +65,9 @@ npm run build
 ## Paper 변경 반영
 
 현재 결과는 Paper의 스냅샷이며 자동 동기화되지 않습니다. 원본은 `src/paper/source.json`에 보관했습니다. Paper 변경 시 해당 문서의 JSX와 CSS 토큰을 다시 내보내고, `src/paper/` 문서와 `src/styles/tokens.css`, 관련 React 컴포넌트를 함께 갱신합니다. 문서에는 Storybook 탐색 링크와 좁은 화면을 위한 레이아웃 조정을 적용했습니다.
+
+## 배포
+
+[공개 Storybook](https://alfo2027.github.io/design-system/?path=/story/overview--guide)
+
+`main` 브랜치에 푸시하면 GitHub Actions가 테스트와 빌드를 실행하고 GitHub Pages에 자동 배포합니다. 워크플로는 `.github/workflows/deploy-storybook.yml`에 있습니다.
