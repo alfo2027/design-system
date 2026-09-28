@@ -19,6 +19,7 @@ const preview: Preview = {
     className: `story-theme${context.parameters.theme === 'light' ? ' story-theme--document' : ''}${context.viewMode === 'docs' ? ' story-theme--docs' : ''}`,
   }, createElement(Story))],
   parameters: {
+    a11y: { context: '#storybook-root', test: 'error' },
     layout: 'fullscreen',
     options: { storySort: { order: ['Overview', 'Foundations', ['Design Token', 'Color', 'Color Modes', 'Typography', 'Iconography', 'Layout'], 'Guidelines', 'Components', ['Theme Preview', 'Button', 'TextField', 'Badge', 'Icon', 'Paper Reference', 'Paper Modes']] } },
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
