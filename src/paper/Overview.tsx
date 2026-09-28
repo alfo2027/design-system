@@ -106,5 +106,5 @@ export function PaperOverview() { return (
       <div style={{ boxSizing: 'border-box', color: 'var(--color-text-muted)', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '24px', whiteSpace: 'pre-wrap' }}>
         문서 구성 참고: SEED Design Foundations · seed-design.io/foundations<br />제목을 선택하거나 왼쪽 메뉴에서 가이드와 컴포넌트를 확인하세요.
       </div>
-    </main>
+    <nav className="mode-links" aria-label="라이트·다크 가이드"><a href="./?path=/story/foundations-color-modes--guide" target="_top">Color Modes · 색상 대응표 →</a><a href="./?path=/story/components-paper-modes--guide" target="_top">Light · Dark · Paper 예시 →</a><a href="./?path=/story/components-theme-preview--dark" target="_top">다크 모드 컴포넌트 체험 →</a></nav></main>
   ); }

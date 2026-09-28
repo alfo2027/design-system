@@ -15,7 +15,7 @@ npm run storybook
 
 ## 포함된 내용
 
-- Paper 문서 8개: Overview, Design Token, Color, Typography, Iconography, Layout, Guidelines, Components 원본 레퍼런스
+- Paper 문서 10개: Overview, Design Token, Color, Typography, Iconography, Layout, Guidelines, Components 원본 레퍼런스, Color Modes, Paper Modes
 - 그레이스케일 10단계, 프라이머리, 포인트 컬러 3종, 의미별 색상 및 간격·라운드 토큰
 - Pretendard 400·500·700과 20px을 포함한 타이포그래피 체계
 - 실제 React 컴포넌트: Button, TextField, Badge, Icon
@@ -71,3 +71,14 @@ npm run build
 [공개 Storybook](https://alfo2027.github.io/design-system/?path=/story/overview--guide)
 
 `main` 브랜치에 푸시하면 GitHub Actions가 테스트와 빌드를 실행하고 GitHub Pages에 자동 배포합니다. 워크플로는 `.github/workflows/deploy-storybook.yml`에 있습니다.
+
+## 라이트·다크 모드
+
+- **Foundations → Color Modes**: Paper의 역할별 색상 28쌍과 사용 기준
+- **Components → Paper Modes**: Paper의 두 모드 정적 비교 예시
+- **Components → Theme Preview → 모드 전환**: 상단 Light / Dark 메뉴로 실제 컴포넌트 전환
+- 일반 컴포넌트 스토리에도 같은 메뉴를 사용할 수 있습니다. Light·Dark 고정 스토리와 다크 검사 스토리는 해당 모드를 유지합니다. Paper 문서는 원본 비교를 위해 라이트 문서 바탕을 유지합니다.
+
+제품에서는 전역 스타일을 불러온 뒤 상위 요소에 `data-theme="light"` 또는 `data-theme="dark"`를 지정합니다. `themes.css`가 역할 토큰을 매핑합니다. Paper의 명시적 light 별칭은 중첩된 모드에서도 순환 참조가 생기지 않도록 값으로 해석해 가져왔으며, 원본 CSS는 `src/paper/source.json`에 보관했습니다.
+
+`npm test`에 두 모드의 토큰 연결과 주요 색 조합 26개의 명암비 검사가 포함됩니다. **Theme Preview → 다크 모드 동작 검사**에서는 입력·저장·비활성 상태·실제 다크 색상 적용을 확인합니다.

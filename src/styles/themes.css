@@ -1,0 +1,67 @@
+[data-theme="light"] {
+  color-scheme: light;
+  --color-canvas: var(--color-light-canvas);
+  --color-surface: var(--color-light-surface);
+  --color-surface-raised: var(--color-light-surface-raised);
+  --color-text: var(--color-light-text);
+  --color-text-muted: var(--color-light-text-muted);
+  --color-border: var(--color-light-border);
+  --color-border-strong: var(--color-light-border-strong);
+  --color-primary: var(--color-light-primary);
+  --color-on-primary: var(--color-light-on-primary);
+  --color-primary-hover: var(--color-light-primary-hover);
+  --color-primary-pressed: var(--color-light-primary-pressed);
+  --color-primary-soft: var(--color-light-primary-soft);
+  --color-focus: var(--color-light-focus);
+  --color-disabled-bg: var(--color-light-disabled-bg);
+  --color-disabled-text: var(--color-light-disabled-text);
+  --color-success: var(--color-light-success);
+  --color-success-soft: var(--color-light-success-soft);
+  --color-warning: var(--color-light-warning);
+  --color-warning-soft: var(--color-light-warning-soft);
+  --color-danger: var(--color-light-danger);
+  --color-danger-soft: var(--color-light-danger-soft);
+  --color-on-danger: var(--color-light-on-danger);
+  --color-accent-violet: var(--color-light-accent-violet);
+  --color-accent-violet-soft: var(--color-light-accent-violet-soft);
+  --color-accent-teal: var(--color-light-accent-teal);
+  --color-accent-teal-soft: var(--color-light-accent-teal-soft);
+  --color-accent-rose: var(--color-light-accent-rose);
+  --color-accent-rose-soft: var(--color-light-accent-rose-soft);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-canvas: var(--color-dark-canvas);
+  --color-surface: var(--color-dark-surface);
+  --color-surface-raised: var(--color-dark-surface-raised);
+  --color-text: var(--color-dark-text);
+  --color-text-muted: var(--color-dark-text-muted);
+  --color-border: var(--color-dark-border);
+  --color-border-strong: var(--color-dark-border-strong);
+  --color-primary: var(--color-dark-primary);
+  --color-on-primary: var(--color-dark-on-primary);
+  --color-primary-hover: var(--color-dark-primary-hover);
+  --color-primary-pressed: var(--color-dark-primary-pressed);
+  --color-primary-soft: var(--color-dark-primary-soft);
+  --color-focus: var(--color-dark-focus);
+  --color-disabled-bg: var(--color-dark-disabled-bg);
+  --color-disabled-text: var(--color-dark-disabled-text);
+  --color-success: var(--color-dark-success);
+  --color-success-soft: var(--color-dark-success-soft);
+  --color-warning: var(--color-dark-warning);
+  --color-warning-soft: var(--color-dark-warning-soft);
+  --color-danger: var(--color-dark-danger);
+  --color-danger-soft: var(--color-dark-danger-soft);
+  --color-on-danger: var(--color-dark-on-danger);
+  --color-accent-violet: var(--color-dark-accent-violet);
+  --color-accent-violet-soft: var(--color-dark-accent-violet-soft);
+  --color-accent-teal: var(--color-dark-accent-teal);
+  --color-accent-teal-soft: var(--color-dark-accent-teal-soft);
+  --color-accent-rose: var(--color-dark-accent-rose);
+  --color-accent-rose-soft: var(--color-dark-accent-rose-soft);
+  color: var(--color-text);
+  background: var(--color-surface);
+}

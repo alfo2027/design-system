@@ -1,0 +1,12 @@
+.theme-preview { width: 100%; max-width: 960px; display: flex; flex-direction: column; gap: 24px; }
+.theme-preview h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.3; margin: 8px 0 16px; }
+.theme-preview h2 { font-size: 20px; line-height: 28px; margin: 0; }
+.theme-preview p { font-size: 16px; line-height: 24px; color: var(--color-text-muted); margin: 0; }
+.theme-preview .theme-preview__eyebrow { font-size: 14px; font-weight: 700; color: var(--color-primary); }
+.theme-preview__card, .theme-preview__raised { display: flex; flex-direction: column; gap: 24px; padding: 24px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-canvas); }
+.theme-preview__raised { background: var(--color-surface-raised); }
+.theme-preview__row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.theme-preview__accent { padding: 8px 16px; border-radius: 9999px; font-size: 14px; }
+.theme-preview__accent--violet { color: var(--color-accent-violet); background: var(--color-accent-violet-soft); }
+.theme-preview__accent--teal { color: var(--color-accent-teal); background: var(--color-accent-teal-soft); }
+.theme-preview__accent--rose { color: var(--color-accent-rose); background: var(--color-accent-rose-soft); }

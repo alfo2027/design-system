@@ -52,5 +52,13 @@ export function PaperDesignToken() { return (
           </div>
         </div>
       </div>
+      <div style={{ borderTopColor: 'var(--color-border)', borderTopStyle: 'solid', borderTopWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', fontFamily: 'var(--font-sans)', gap: '8px', paddingTop: '16px' }}>
+        <div style={{ boxSizing: 'border-box', color: 'var(--color-text)', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 700, lineHeight: '28px' }}>
+          모드 확장 / Light · Dark
+        </div>
+        <div style={{ boxSizing: 'border-box', color: 'var(--color-text-muted)', fontFamily: 'var(--font-sans)', fontSize: '16px', lineHeight: '24px', whiteSpace: 'pre-wrap' }}>
+          Paper에서는 --color-light-* / --color-dark-*로 선택합니다. 제품에서는 모드별 값을 --color-*에 연결합니다.<br />예: --color-surface → Light #FFFFFF / Dark #171717 · 전체 대응표는 02A / Color Modes를 확인하세요.
+        </div>
+      </div>
     </main>
   ); }

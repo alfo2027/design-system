@@ -12,3 +12,7 @@
   .paper-document .paper-row { gap: 16px !important; }
   .paper-document .paper-row > div[style*="width: 200px"], .paper-document .paper-row > div[style*="width: 240px"] { width: 100% !important; }
 }
+
+.paper-document .mode-table-scroll { overflow-x: auto; width: 100%; }
+.paper-document .mode-table { min-width: 1280px; }
+.paper-document .mode-table .paper-row { flex-wrap: nowrap; }

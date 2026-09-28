@@ -216,7 +216,7 @@ export function PaperColor() { return (
           사용 기준 · 역할을 먼저 선택
         </div>
         <div style={{ boxSizing: 'border-box', color: 'var(--color-text-muted)', fontFamily: 'var(--font-sans)', fontSize: '16px', lineHeight: '32px', whiteSpace: 'pre-wrap' }}>
-          주요 행동 → Primary / 본문 → Text / 보조 설명 → Muted<br />콘텐츠 분류·강조 → Accent / 완료·주의·오류 → Success · Warning · Danger<br />화면에서는 역할 토큰을 먼저 사용합니다. Gray 스케일은 역할을 정의하거나 팔레트를 확장할 때 사용합니다.
+          주요 행동 → Primary / 본문 → Text / 보조 설명 → Muted<br />콘텐츠 분류·강조 → Accent / 완료·주의·오류 → Success · Warning · Danger<br />화면에서는 역할 토큰을 먼저 사용합니다. Gray 스케일은 역할을 정의하거나 팔레트를 확장할 때 사용합니다.<br />라이트·다크의 역할별 값과 조합은 02A / Color Modes를 확인하세요.
         </div>
       </div>
     </main>
