@@ -24,6 +24,10 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Include 문장한입
+        run: |
+          mkdir -p storybook-static/munjanghanip
+          cp -R site/munjanghanip/. storybook-static/munjanghanip/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
